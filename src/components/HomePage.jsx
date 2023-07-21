@@ -1,15 +1,19 @@
 const HomePage = () => {
   return (
     <div>
-      {' '}
-      <div>Shivesh Sinha</div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      <h1>Realshivesh</h1>
+      <h2>Let&apos;s connect</h2>
+      <ul>
+        <li>
+          <a href="https://github.com/realshivesh">Github</a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/realshivesh/">LinkedIn</a>
+        </li>
+        <li>
+          <a href="https://instagram.com/realshivesh">Instagram</a>
+        </li>
+      </ul>
     </div>
   )
 }
