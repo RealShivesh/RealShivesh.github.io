@@ -1,19 +1,12 @@
+import Socials from './Socials'
+
 const HomePage = () => {
   return (
     <div>
       <h1>Realshivesh</h1>
-      <h2>Let&apos;s connect</h2>
-      <ul>
-        <li>
-          <a href="https://github.com/realshivesh">Github</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/realshivesh/">LinkedIn</a>
-        </li>
-        <li>
-          <a href="https://instagram.com/realshivesh">Instagram</a>
-        </li>
-      </ul>
+      <section>Welcome to my homepage</section>
+      <section>I am a frontend developer on the verge of achieving fullstack development mastery.</section>
+      <Socials />
     </div>
   )
 }
