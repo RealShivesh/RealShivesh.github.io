@@ -1,4 +1,4 @@
-import './App.css'
+import './assets/styles/main.scss'
 import Footer from './components/Footer'
 import HomePage from './components/HomePage'
 import WorkInProgress from './components/WorkInProgress'

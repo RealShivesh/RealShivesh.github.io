@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+#root {
+  max-width: 1280px;
+  width: 80vw;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+}
+
+.page {
+  height: 100vh;
+}
+
+.card {
+  padding: 2em;
+}
+
+img {
+  aspect-ratio: 1/1;
+  max-width: 60vw;
+  max-height: 40vh;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+}
