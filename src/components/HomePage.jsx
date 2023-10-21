@@ -1,7 +1,6 @@
 import Socials from './Socials'
 
 const HomePage = () => {
-  //TODO: horizontal swipe in mobile view
   return (
     <div>
       <div className="page">
