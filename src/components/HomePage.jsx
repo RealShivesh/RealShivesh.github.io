@@ -4,9 +4,14 @@ const HomePage = () => {
   return (
     <div>
       <div className="page">
-        <h1>Realshivesh</h1>
-        <section>Welcome to my homepage</section>
-        <section>I am a frontend developer on the verge of achieving fullstack development mastery.</section>
+        <div className="header">
+          <h1>Realshivesh</h1>
+        </div>
+        <section>Hi, I am Shivesh, a frontend developer and a (programming and foreign) language enthusiast.</section>
+        <div>About</div>
+        <div></div>
+        <div></div>
+        <div>Connect</div>
       </div>
       <Socials />
     </div>
