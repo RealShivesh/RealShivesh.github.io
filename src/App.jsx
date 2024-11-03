@@ -1,11 +1,13 @@
-import './App.css'
+import './styles/main.scss'
 import Footer from './components/Footer'
+import HomePage from './components/HomePage'
 import WorkInProgress from './components/WorkInProgress'
 
 function App() {
+  const pageActive = true
   return (
     <>
-      <WorkInProgress />
+      {pageActive ? <HomePage /> : <WorkInProgress />}
       <Footer />
     </>
   )
