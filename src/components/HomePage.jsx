@@ -1,22 +1,31 @@
 const HomePage = () => {
   return (
     <div className="container">
-      <div className="col">
-        <h1>Hi, I’m Shivesh</h1>A passionate frontend developer and a problem solver at heart. I specialize in creating
-        intuitive, user-focused web applications with clean, modern designs that perform seamlessly across devices.
-      </div>
-      <div className="col">
-        <div className="row">
-          <h2>Skills and Expertise</h2>
-          Core Technologies: React, JavaScript (ES6+), HTML, CSS, Git. Frameworks/Libraries: Material UI, Tailwind CSS,
-          Styled Components. Tools: VS Code, GitHub, Notion, Figma (basic knowledge for design collaboration).
-          Additional Skills: Strong foundation in project management and research skills from my UPSC prep.
+      <div className="intro">
+        <h1>Hi, I’m Shivesh</h1>
+        <div className="card">
+          A passionate frontend developer and a problem solver at heart. I specialize in creating intuitive,
+          user-focused web applications with clean, modern designs that perform seamlessly across devices.
         </div>
-        <div className="row">
+      </div>
+      <div className="row">
+        <div className="col">
+          <h2>Skills and Expertise</h2>
+          <li>React</li>
+          JavaScript (ES6+), HTML, CSS, Git. Frameworks/Libraries: Material UI, Tailwind CSS, Styled Components. Tools:
+          VS Code, GitHub, Notion, Figma (basic knowledge for design collaboration). Additional Skills: Strong
+          foundation in project management and research skills from my UPSC prep.
+        </div>
+        <div className="col">
           <h2>Experience</h2>
-          Highlights Built several responsive and high-performing projects with React, focusing on clean, maintainable
-          code. Proficient in Material UI, and I’ve led updates for several complex UI components. Dedicated learner,
-          always exploring new technologies to keep my skills sharp and my projects efficient.
+          <li>
+            Highlights Built several responsive and high-performing projects with React, focusing on clean, maintainable
+            code.
+          </li>
+          <li>Proficient in Material UI, and I’ve led updates for several complex UI components.</li>
+          <li>
+            Dedicated learner, always exploring new technologies to keep my skills sharp and my projects efficient.
+          </li>
         </div>
       </div>
       <div className="col">
