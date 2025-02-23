@@ -1,0 +1,125 @@
+@use '../base/variables';
+
+.hero {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  background: variables.$light-background;
+  color: variables.$secondary-color;
+  padding-top: 80px;
+
+  // Background Animation
+  .gradient-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, variables.$primary-color, #6a11cb);
+    animation: gradientAnimation 6s infinite alternate;
+    opacity: 0.2;
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.2);
+    }
+  }
+
+  .content {
+    max-width: 600px;
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: variables.$secondary-color;
+
+      .highlight {
+        color: variables.$primary-color;
+      }
+    }
+
+    .typed-text {
+      font-size: 1.5rem;
+      color: variables.$primary-color;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+      color: darken(variables.$secondary-color, 15%);
+    }
+
+    .ctaButtons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+
+      .ctaPrimary {
+        background: variables.$primary-color;
+        color: variables.$light-background;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: darken(variables.$primary-color, 10%);
+          transform: translateY(-3px);
+        }
+      }
+
+      .ctaSecondary {
+        background: none;
+        color: variables.$primary-color;
+        padding: 12px 24px;
+        border: 2px solid variables.$primary-color;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: variables.$primary-color;
+          color: variables.$light-background;
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+/* ✅ Dark Mode Support */
+[data-theme='dark'] .hero {
+  background: variables.$dark-background;
+  color: variables.$light-background;
+
+  h1,
+  .typed-text {
+    color: variables.$light-background;
+  }
+
+  p {
+    color: lighten(variables.$secondary-color, 30%);
+  }
+
+  .ctaPrimary {
+    background: lighten(variables.$primary-color, 10%);
+    color: variables.$dark-background;
+  }
+
+  .ctaSecondary {
+    border-color: lighten(variables.$primary-color, 10%);
+    color: lighten(variables.$primary-color, 10%);
+  }
+}

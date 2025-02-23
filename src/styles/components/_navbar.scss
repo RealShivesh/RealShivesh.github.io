@@ -1,0 +1,138 @@
+@use '../base/variables';
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 92vw;
+  background: variables.$light-background;
+  padding: 15px 40px;
+  display: flex;
+  flex-direction: row; /* ✅ Ensure Header Stays Row-Based */
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: variables.$secondary-color;
+    text-decoration: none;
+  }
+
+  .menu-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* ✅ Ensures spacing between elements */
+  }
+
+  .menu-toggle {
+    display: none; /* ✅ Now it will show correctly */
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  .links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+
+    li {
+      a {
+        text-decoration: none;
+        color: variables.$secondary-color;
+        font-weight: 500;
+        transition: 0.3s;
+
+        &:hover {
+          color: variables.$primary-color;
+        }
+      }
+    }
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: 20px; /* ✅ Ensures proper spacing in web view */
+  }
+
+  @media (max-width: 768px) {
+    /* ✅ Keep Header Row-Based */
+    flex-direction: row;
+    padding: 10px 20px;
+
+    .menu-container {
+      position: absolute;
+      right: 15px;
+      top: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px; /* ✅ Ensures spacing */
+    }
+
+    .menu-toggle {
+      display: block;
+      font-weight: bold;
+      color: variables.$secondary-color;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      padding: 0;
+    }
+
+    /* ✅ Navigation Links Become Column */
+    .links {
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      background: variables.$light-background;
+      padding: 15px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column; /* ✅ Ensure Column Layout */
+      align-items: center;
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .links.active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* ✅ Move Theme Toggle Next to Hamburger in Mobile */
+    .theme-toggle {
+      font-size: 16px;
+    }
+  }
+}
+
+// Dark Mode
+[data-theme='dark'] .navbar {
+  background: variables.$dark-background;
+
+  .logo,
+  a {
+    color: white;
+  }
+
+  .theme-toggle {
+    color: white;
+  }
+
+  @media (max-width: 768px) {
+    .menu-toggle {
+      color: variables.$light-background;
+    }
+  }
+}
