@@ -23,7 +23,7 @@ export const Hero = () => {
             words={[
               'Building things with React ⚛️',
               'Exploring ideas through writing ✍️',
-              'Curating the best music playlists 🎵',
+              'Crafting lines and verses 🎵',
               'Always learning, always growing 🚀',
             ]}
             loop
@@ -35,8 +35,8 @@ export const Hero = () => {
           />
         </h2>
 
-        <p>🚀 Frontend Developer | Writer | Music Curator</p>
-        <p>🎨 Crafting sleek, high-performance web experiences.</p>
+        <p>🚀 Frontend Developer | Writer | Poet</p>
+        <p>🎨 Crafting sleek, high-performance web experiences, and enchanting verses.</p>
 
         {/* CTA Buttons */}
         <motion.div
