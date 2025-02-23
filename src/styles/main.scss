@@ -1,0 +1,11 @@
+@use './base/variables';
+@use './components/navbar';
+@use './components/hero';
+
+body {
+  font-family: variables.$font-primary;
+  margin: 0;
+  .container {
+    width: 100vw;
+  }
+}
