@@ -1,5 +1,6 @@
 import { useContext, useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
+import { navLinks } from '../data/siteData'
 import { ThemeContext } from '../context/ThemeContext'
 import '../styles/components/_navbar.scss'
 
@@ -41,31 +42,13 @@ export const Navbar = () => {
       </div>
 
       <ul ref={menuRef} className={`links ${menuOpen ? 'active' : ''}`}>
-        <li>
-          <Link to="/about" onClick={() => setMenuOpen(false)}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="/work" onClick={() => setMenuOpen(false)}>
-            Work
-          </Link>
-        </li>
-        <li>
-          <Link to="/writing" onClick={() => setMenuOpen(false)}>
-            Writing
-          </Link>
-        </li>
-        <li>
-          <Link to="/notes" onClick={() => setMenuOpen(false)}>
-            Notes
-          </Link>
-        </li>
-        <li>
-          <Link to="/contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </Link>
-        </li>
+        {navLinks.map((link) => (
+          <li key={link.to}>
+            <Link to={link.to} onClick={() => setMenuOpen(false)}>
+              {link.label}
+            </Link>
+          </li>
+        ))}
         <li>
           <button type="button" onClick={toggleTheme} className="theme-toggle">
             {theme === 'light' ? '🌙' : '☀️'}

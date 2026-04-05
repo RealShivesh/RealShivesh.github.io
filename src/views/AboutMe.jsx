@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { skills } from '../data/siteData'
 import '../styles/components/_about.scss'
 
 export const About = () => {
@@ -42,15 +43,16 @@ export const About = () => {
           </p>
 
           <div className="skills">
-            <h3>Stack and tools</h3>
-            <div className="skills-grid">
-              <span>React</span>
-              <span>Sass</span>
-              <span>Framer Motion</span>
-              <span>TypeScript</span>
-              <span>Design systems</span>
-              <span>Git</span>
-            </div>
+            {skills.map((skillGroup) => (
+              <div key={skillGroup.category} className="skill-category">
+                <h3>{skillGroup.category}</h3>
+                <div className="skills-grid">
+                  {skillGroup.items.map((skill) => (
+                    <span key={skill}>{skill}</span>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
 
           <div className="fun-facts">

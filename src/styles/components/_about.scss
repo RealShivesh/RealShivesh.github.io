@@ -140,6 +140,19 @@
   margin-top: 28px;
 }
 
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category:last-child {
+  margin-bottom: 0;
+}
+
+.skill-category h3 {
+  font-size: 1.1rem;
+  margin: 0 0 14px;
+}
+
 .about-right h3 {
   font-size: 1.1rem;
   margin: 0 0 14px;
