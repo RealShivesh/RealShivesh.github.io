@@ -6,10 +6,10 @@ export const Work = () => {
     <section className="page page--work">
       <div className="page-hero">
         <span className="eyebrow">Work</span>
-        <h1>Projects that balance craft with clarity.</h1>
+        <h1>Roadmap projects I am actively shaping into products.</h1>
         <p>
-          I build web experiences that simplify complexity, improve decision-making, and make teams feel
-          confident about the next step.
+          This is not a placeholder gallery. Each concept here has a clear user problem, an implementation path, and
+          a product reason to exist.
         </p>
       </div>
 
@@ -20,17 +20,20 @@ export const Work = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <span className="project-label">Design systems</span>
-          <h2>Turning a fragmented product into a scalable UI system</h2>
+          <div className="project-head">
+            <span className="project-label">Project Bloodline</span>
+            <span className="project-stage">Planned</span>
+          </div>
+          <h2>A sophisticated family-tree engine powered by object relationships.</h2>
           <p>
-            Led the frontend design system work for a SaaS company, reducing implementation time by 40% while
-            preserving design consistency across three products.
+            A graph-first product to model lineage, relationship rules, and inheritance paths. The goal is to make
+            complex family structures explorable and queryable, not just visual.
           </p>
           <div className="project-meta">
-            <span>Role: Lead frontend engineer</span>
-            <span>Tech: React, Sass, Figma, Storybook</span>
+            <span>Problem: representing deep relationships without losing clarity</span>
+            <span>Stack direction: TypeScript domain model, graph traversal, React visualization</span>
           </div>
-          <div className="project-outcome">Outcome: faster releases, fewer UI regressions, clearer handoffs.</div>
+          <div className="project-outcome">Portfolio signal: data structures + product UI + reasoning depth.</div>
         </motion.article>
 
         <motion.article
@@ -39,17 +42,20 @@ export const Work = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <span className="project-label">Performance</span>
-          <h2>Optimizing an onboarding flow for faster conversions</h2>
+          <div className="project-head">
+            <span className="project-label">RailStack</span>
+            <span className="project-stage">Queued</span>
+          </div>
+          <h2>Railway tracking dashboard with table scraping and live trend summaries.</h2>
           <p>
-            Refactored a multi-step onboarding experience to reduce load time, simplify state, and remove
-            unnecessary rerenders.
+            A scraper-backed tracker for schedules, delays, and movement signals. Designed to turn dense railway data
+            into a clean view people can actually act on.
           </p>
           <div className="project-meta">
-            <span>Role: Frontend developer</span>
-            <span>Tech: React, Vite, TypeScript, web performance</span>
+            <span>Problem: high-friction data tables with low decision value</span>
+            <span>Stack direction: Python scraping pipeline, API layer, React analytics UI</span>
           </div>
-          <div className="project-outcome">Outcome: a 25% faster path to activation and lower abandonment.</div>
+          <div className="project-outcome">Portfolio signal: automation pipeline + practical interface design.</div>
         </motion.article>
 
         <motion.article
@@ -58,17 +64,64 @@ export const Work = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <span className="project-label">Content strategy</span>
-          <h2>Making technical writing feel intentional and useful</h2>
+          <div className="project-head">
+            <span className="project-label">FareWatch</span>
+            <span className="project-stage">Active concept</span>
+          </div>
+          <h2>Flight fare trend tracker with automated daily alerts.</h2>
           <p>
-            Created a writing structure for developer-facing content that keeps attention on tradeoffs, not
-            features.
+            A lightweight product to scrape fare movements, store trend history, and deliver route-based updates until
+            the user stops tracking.
           </p>
           <div className="project-meta">
-            <span>Role: Writer & technical lead</span>
-            <span>Tech: Markdown, React, copy systems</span>
+            <span>Problem: price spikes are unpredictable and painful to monitor manually</span>
+            <span>Stack direction: scheduled scraper, persistent storage, digest notifications</span>
           </div>
-          <div className="project-outcome">Outcome: clearer messaging and stronger alignment with product goals.</div>
+          <div className="project-outcome">Portfolio signal: applied automation with real user utility.</div>
+        </motion.article>
+
+        <motion.article
+          className="project-card"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <div className="project-head">
+            <span className="project-label">LabelIQ</span>
+            <span className="project-stage">Researching</span>
+          </div>
+          <h2>A label-intelligence product in the same space as TruthIn-style tools.</h2>
+          <p>
+            Exploring how consumers can evaluate claims faster with better labeling clarity. This will be framed as a
+            product thesis, not a feature clone.
+          </p>
+          <div className="project-meta">
+            <span>Problem: low trust and high ambiguity in product labels</span>
+            <span>Stack direction: structured label parsing, confidence scoring, clear UX communication</span>
+          </div>
+          <div className="project-outcome">Portfolio signal: product strategy + data interpretation + UX ethics.</div>
+        </motion.article>
+
+        <motion.article
+          className="project-card"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+        >
+          <div className="project-head">
+            <span className="project-label">Sparks-UI</span>
+            <span className="project-stage">In parallel</span>
+          </div>
+          <h2>A custom design system for my own app ecosystem.</h2>
+          <p>
+            Building a reusable UI foundation to power future products with shared components, interaction patterns,
+            and visual consistency.
+          </p>
+          <div className="project-meta">
+            <span>Problem: repeated UI decisions across projects slow down delivery</span>
+            <span>Stack direction: component library, tokens, docs, and usage guidelines</span>
+          </div>
+          <div className="project-outcome">Portfolio signal: systems thinking and long-term frontend discipline.</div>
         </motion.article>
       </div>
     </section>

@@ -4,7 +4,10 @@
   min-height: 100vh;
   padding: 120px 6vw 90px;
   color: variables.$secondary-color;
-  background: linear-gradient(180deg, variables.$light-background 0%, #eef6fb 100%);
+  background:
+    radial-gradient(circle at 8% 15%, rgba(52, 152, 219, 0.12), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(244, 177, 131, 0.15), transparent 24%),
+    linear-gradient(180deg, variables.$light-background 0%, #eef6fb 100%);
 }
 
 .page-hero {
@@ -44,14 +47,31 @@
 .project-card,
 .writing-card,
 .contact-card {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid rgba(44, 62, 80, 0.1);
   border-radius: 24px;
   padding: 28px;
   box-shadow: 0 20px 50px rgba(44, 62, 80, 0.06);
+  backdrop-filter: blur(14px);
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+
+.project-card h2,
+.writing-card h2,
+.contact-card h2 {
+  margin: 0;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.project-card p,
+.writing-card p,
+.contact-card p,
+.contact-card li {
+  margin: 0;
+  line-height: 1.75;
 }
 
 .project-label {
@@ -60,6 +80,25 @@
   letter-spacing: 0.16em;
   font-weight: 700;
   color: variables.$primary-color;
+}
+
+.project-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-stage {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(44, 62, 80, 0.08);
+  color: rgba(44, 62, 80, 0.9);
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .project-meta {
@@ -77,7 +116,6 @@
 .writing-card h2,
 .contact-card h2 {
   font-size: 1.35rem;
-  margin: 0;
 }
 
 .contact-card ul {
@@ -95,8 +133,15 @@
   font-weight: 700;
 }
 
+.contact-link:hover {
+  text-decoration: underline;
+}
+
 [data-theme='dark'] .page {
-  background: linear-gradient(180deg, #11151b 0%, #0c1219 100%);
+  background:
+    radial-gradient(circle at 8% 15%, rgba(52, 152, 219, 0.12), transparent 30%),
+    radial-gradient(circle at 92% 12%, rgba(244, 177, 131, 0.14), transparent 24%),
+    linear-gradient(180deg, #11151b 0%, #0c1219 100%);
   color: variables.$light-text;
 }
 
@@ -111,4 +156,15 @@
 [data-theme='dark'] .project-meta,
 [data-theme='dark'] .page-hero p {
   color: rgba(variables.$light-text, 0.7);
+}
+
+[data-theme='dark'] .project-stage {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(245, 245, 245, 0.86);
+}
+
+@media (max-width: 720px) {
+  .page {
+    padding: 110px 6vw 70px;
+  }
 }
