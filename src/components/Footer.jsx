@@ -1,7 +1,11 @@
 const Footer = () => {
   const date = new Date().getFullYear()
 
-  return <div className="footer">&#x00A9; {date} RealShivesh</div>
+  return (
+    <footer className="footer">
+      <div>© {date} RealShivesh</div>
+    </footer>
+  )
 }
 
 export default Footer

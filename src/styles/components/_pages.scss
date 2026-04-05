@@ -1,0 +1,114 @@
+@use '../base/variables';
+
+.page {
+  min-height: 100vh;
+  padding: 120px 6vw 90px;
+  color: variables.$secondary-color;
+  background: linear-gradient(180deg, variables.$light-background 0%, #eef6fb 100%);
+}
+
+.page-hero {
+  max-width: 720px;
+  margin: 0 auto 40px;
+  text-align: center;
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-size: 0.8rem;
+    color: rgba(variables.$secondary-color, 0.72);
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 4vw, 3.4rem);
+    margin: 18px 0 18px;
+  }
+
+  p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: rgba(variables.$secondary-color, 0.82);
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+
+.project-grid,
+.writing-list,
+.contact-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.project-card,
+.writing-card,
+.contact-card {
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(44, 62, 80, 0.1);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 50px rgba(44, 62, 80, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.project-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 700;
+  color: variables.$primary-color;
+}
+
+.project-meta {
+  display: grid;
+  gap: 8px;
+  color: rgba(variables.$secondary-color, 0.68);
+  font-size: 0.95rem;
+}
+
+.project-outcome {
+  font-weight: 700;
+  color: variables.$secondary-color;
+}
+
+.writing-card h2,
+.contact-card h2 {
+  font-size: 1.35rem;
+  margin: 0;
+}
+
+.contact-card ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.contact-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: variables.$primary-color;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+[data-theme='dark'] .page {
+  background: linear-gradient(180deg, #11151b 0%, #0c1219 100%);
+  color: variables.$light-text;
+}
+
+[data-theme='dark'] .project-card,
+[data-theme='dark'] .writing-card,
+[data-theme='dark'] .contact-card {
+  background: rgba(16, 22, 30, 0.88);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+[data-theme='dark'] .project-meta,
+[data-theme='dark'] .page-hero p {
+  color: rgba(variables.$light-text, 0.7);
+}

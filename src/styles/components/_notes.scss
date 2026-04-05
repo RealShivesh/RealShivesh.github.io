@@ -1,0 +1,202 @@
+@use '../base/variables';
+
+.notes-page {
+  min-height: 100vh;
+  padding: 120px 6vw 90px;
+  background: radial-gradient(circle at 10% 20%, rgba(52, 152, 219, 0.18), transparent 55%),
+    radial-gradient(circle at 90% 10%, rgba(44, 62, 80, 0.22), transparent 50%),
+    linear-gradient(160deg, #f9fafb 0%, #f1f3f6 65%, #eef6fb 100%);
+  color: variables.$secondary-color;
+  position: relative;
+  overflow: hidden;
+}
+
+.notes-page::before,
+.notes-page::after {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  opacity: 0.15;
+  filter: blur(2px);
+  animation: float 8s ease-in-out infinite;
+  z-index: 0;
+}
+
+.notes-page::before {
+  top: -80px;
+  right: -60px;
+  background: #f4b183;
+}
+
+.notes-page::after {
+  bottom: -120px;
+  left: -80px;
+  background: #7cb9e8;
+  animation-delay: 2s;
+}
+
+.notes-hero {
+  max-width: 720px;
+  margin: 0 auto 50px;
+  position: relative;
+  z-index: 1;
+
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: rgba(variables.$secondary-color, 0.7);
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 4vw, 3.4rem);
+    margin: 12px 0 16px;
+  }
+
+  .lede {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: rgba(variables.$secondary-color, 0.8);
+  }
+}
+
+.lanes {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  position: relative;
+  z-index: 1;
+}
+
+.lane {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(44, 62, 80, 0.12);
+  border-radius: 24px;
+  padding: 28px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 16px 40px rgba(44, 62, 80, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+  animation: rise 0.8s ease both;
+
+  .lane-header {
+    display: grid;
+    gap: 6px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+    margin: 0;
+  }
+
+  .lane-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: 600;
+  }
+
+  .lane-subtitle {
+    margin: 0;
+    color: rgba(variables.$secondary-color, 0.75);
+  }
+
+  .lane-meta {
+    display: grid;
+    gap: 6px;
+    font-size: 0.95rem;
+    color: rgba(variables.$secondary-color, 0.75);
+  }
+
+  .lane-list {
+    margin: 0;
+    padding-left: 18px;
+    display: grid;
+    gap: 10px;
+    line-height: 1.6;
+  }
+
+  .lane-note {
+    margin: 0;
+    font-weight: 600;
+  }
+}
+
+.lane--thinking .lane-tag {
+  color: #2c7fb8;
+}
+
+.lane--synthesis .lane-tag {
+  color: #8e5d9c;
+}
+
+.lane--practitioner .lane-tag {
+  color: #b44b4b;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .notes-page {
+    padding: 110px 6vw 70px;
+  }
+
+  .lane {
+    padding: 22px;
+  }
+}
+
+[data-theme='dark'] .notes-page {
+  background: radial-gradient(circle at 10% 20%, rgba(52, 152, 219, 0.18), transparent 60%),
+    radial-gradient(circle at 90% 15%, rgba(244, 177, 131, 0.18), transparent 55%),
+    linear-gradient(160deg, #11151b 0%, #151b23 60%, #0c1219 100%);
+  color: variables.$light-text;
+}
+
+[data-theme='dark'] .notes-hero {
+  .eyebrow {
+    color: rgba(variables.$light-text, 0.7);
+  }
+
+  .lede {
+    color: rgba(variables.$light-text, 0.8);
+  }
+}
+
+[data-theme='dark'] .lane {
+  background: rgba(16, 22, 30, 0.85);
+  border-color: rgba(245, 245, 245, 0.12);
+  color: variables.$light-text;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+
+  .lane-subtitle,
+  .lane-meta {
+    color: rgba(variables.$light-text, 0.75);
+  }
+}

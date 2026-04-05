@@ -21,7 +21,7 @@ export const About = () => {
             👋 Hey, I'm <span className="highlight">Shivesh</span>
           </h2>
           <p>
-            A **Frontend Developer** who loves crafting **sleek, interactive web experiences** with React, Sass, and
+            A Frontend Developer who loves crafting **sleek, interactive web experiences** with React, Sass, and
             modern UI/UX principles. When I’m not coding, I’m either **curating music, playing chess, experimenting in
             the kitchen, or working on my stand-up material.**
           </p>
@@ -44,19 +44,19 @@ export const About = () => {
             <h3>🎭 Beyond the Code</h3>
             <div className="facts-grid">
               <div className="fact-card">
-                🍳 **Cooking Enthusiast:** If I weren’t coding, I’d be running a restaurant.
+                🍳 Cooking Enthusiast: If I weren’t coding, I’d be running a restaurant.
               </div>
-              <div className="fact-card">♟️ **Chess Player:** Always thinking 5 moves ahead.</div>
-              <div className="fact-card">🎧 **Music Junkie:** Linkin Park, Green Day & an ever-growing playlist.</div>
-              <div className="fact-card">🎤 **Stand-Up Fanatic:** Dark humor & sharp wit? Say no more.</div>
-              <div className="fact-card">💡 **Philosophy:** "Keep it clean, make it fast, let it flow."</div>
+              <div className="fact-card">♟️ Chess Player: Always thinking 5 moves ahead.</div>
+              <div className="fact-card">🎧 Music Junkie: Linkin Park, Green Day & an ever-growing playlist.</div>
+              <div className="fact-card">🎤 Stand-Up Fanatic: Dark humor & sharp wit? Say no more.</div>
+              <div className="fact-card">💡 Philosophy: "Keep it clean, make it fast, let it flow."</div>
             </div>
           </div>
 
           {/* ✅ CTA Buttons */}
           <div className="about-cta">
-            <a href="#work" className="cta-primary">
-              Let's connect!
+            <a href="/work" className="cta-primary">
+              Explore my work
             </a>
           </div>
         </div>

@@ -21,10 +21,9 @@ export const Hero = () => {
         <h2 className="typed-text">
           <Typewriter
             words={[
-              'Building things with React ⚛️',
-              'Exploring ideas through writing ✍️',
-              'Crafting lines and verses 🎵',
-              'Always learning, always growing 🚀',
+              'Building reliable web systems on the frontend ⚛️',
+              'Thinking through systems, decisions, and tradeoffs 🧠',
+              'Turning complexity into calm, usable interfaces 🎨'
             ]}
             loop
             cursor
@@ -34,9 +33,8 @@ export const Hero = () => {
             delaySpeed={2000}
           />
         </h2>
-
-        <p>🚀 Frontend Developer | Writer | Poet</p>
-        <p>🎨 Crafting sleek, high-performance web experiences, and enchanting verses.</p>
+        <p>Frontend Developer · Systems Thinker · Writer</p>
+        <p>Designing thoughtful web experiences with long-term sanity in mind.</p>
 
         {/* CTA Buttons */}
         <motion.div
@@ -45,11 +43,11 @@ export const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <a href="#work" className="ctaPrimary">
+          <a href="/work" className="ctaPrimary">
             Explore My Work
           </a>
-          <a href="#contact" className="ctaSecondary">
-            Lets Talk
+          <a href="/writing" className="ctaSecondary">
+            Read My Writings
           </a>
         </motion.div>
       </motion.div>

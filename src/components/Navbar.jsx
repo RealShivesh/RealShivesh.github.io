@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { ThemeContext } from '../context/ThemeContext'
 import '../styles/components/_navbar.scss'
 
@@ -22,48 +23,54 @@ export const Navbar = () => {
   }, [])
 
   return (
-    <nav className="navbar">
-      <a href="/" className="logo">
+    <nav className="navbar" aria-label="Primary navigation">
+      <Link to="/" className="logo">
         RealShivesh
-      </a>
+      </Link>
 
-      {/* ✅ Wrap Hamburger + Theme Toggle in One Container */}
       <div className="menu-container">
-        <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? 'V' : 'A'}
+        <button
+          type="button"
+          className="menu-toggle"
+          onClick={() => setMenuOpen((current) => !current)}
+          aria-expanded={menuOpen}
+          aria-label="Toggle navigation"
+        >
+          {menuOpen ? '✕' : '☰'}
         </button>
       </div>
 
-      {/* ✅ Navigation Links (Column on Mobile) */}
       <ul ref={menuRef} className={`links ${menuOpen ? 'active' : ''}`}>
         <li>
-          <a href="/about" onClick={() => setMenuOpen(false)}>
+          <Link to="/about" onClick={() => setMenuOpen(false)}>
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/work" onClick={() => setMenuOpen(false)}>
+          <Link to="/work" onClick={() => setMenuOpen(false)}>
             Work
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/writing" onClick={() => setMenuOpen(false)}>
+          <Link to="/writing" onClick={() => setMenuOpen(false)}>
             Writing
-          </a>
+          </Link>
         </li>
-        {/* <li>
-          <a href="/books" onClick={() => setMenuOpen(false)}>
-            Books
-          </a>
-        </li> */}
         <li>
-          <a href="/contact" onClick={() => setMenuOpen(false)}>
-            Contact
-          </a>
+          <Link to="/notes" onClick={() => setMenuOpen(false)}>
+            Notes
+          </Link>
         </li>
-        <a onClick={toggleTheme} className="theme-toggle">
-          {theme === 'light' ? '🌙' : '☀️'}
-        </a>
+        <li>
+          <Link to="/contact" onClick={() => setMenuOpen(false)}>
+            Contact
+          </Link>
+        </li>
+        <li>
+          <button type="button" onClick={toggleTheme} className="theme-toggle">
+            {theme === 'light' ? '🌙' : '☀️'}
+          </button>
+        </li>
       </ul>
     </nav>
   )

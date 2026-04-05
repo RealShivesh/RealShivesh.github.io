@@ -1,11 +1,22 @@
 @use './base/variables';
 @use './components/navbar';
 @use './components/hero';
+@use './components/notes';
+@use './components/pages';
 
 body {
   font-family: variables.$font-primary;
   margin: 0;
-  .container {
-    width: 100vw;
-  }
+  min-height: 100vh;
+  background: variables.$light-background;
+  color: variables.$secondary-color;
+}
+
+.container {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.app-content {
+  padding-top: 90px;
 }
